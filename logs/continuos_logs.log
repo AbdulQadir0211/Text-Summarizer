@@ -1,0 +1,31 @@
+[2024-12-19 05:10:18,690: INFO: main: stage Data Ingestion stage initiated]
+[2024-12-19 05:10:18,694: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-12-19 05:10:18,698: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-12-19 05:10:18,698: ERROR: main: yaml file is empty]
+Traceback (most recent call last):
+  File "K:\Text-Summarizer\src\textSummarizer\utils\common.py", line 31, in read_yaml
+    return ConfigBox(content)
+  File "box\box.py", line 259, in box.box.Box.__init__
+box.exceptions.BoxValueError: First argument must be mapping or iterable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "K:\Text-Summarizer\main.py", line 9, in <module>
+    data_ingestion_pipeline.initiate_data_ingestion()
+  File "K:\Text-Summarizer\src\textSummarizer\pipeline\stage_1_data_ingestion_pipeline.py", line 11, in initiate_data_ingestion
+    config=ConfigurationManager()
+  File "K:\Text-Summarizer\src\textSummarizer\config\configuration.py", line 11, in __init__
+    self.paramss=read_yaml(params_filepath)
+  File "k:\Text-Summarizer\venv\lib\site-packages\ensure\main.py", line 849, in __call__
+    return_val = self.f(*args, **kwargs)
+  File "K:\Text-Summarizer\src\textSummarizer\utils\common.py", line 33, in read_yaml
+    raise ValueError("yaml file is empty")
+ValueError: yaml file is empty
+[2024-12-19 05:10:43,861: INFO: main: stage Data Ingestion stage initiated]
+[2024-12-19 05:10:43,865: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-12-19 05:10:43,868: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-12-19 05:10:43,870: INFO: common: created directory at: artifacts]
+[2024-12-19 05:10:43,873: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-12-19 05:10:46,295: INFO: data_ingestion: File is downloaded]
+[2024-12-19 05:10:46,967: INFO: main: Stage Data Ingestion stage Completed]
